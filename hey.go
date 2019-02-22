@@ -85,7 +85,9 @@ Options:
   -t  Timeout for each request in seconds. Default is 20, use 0 for infinite.
   -A  HTTP Accept header.
   -d  HTTP request body.
-  -D  HTTP request body from file. For example, /home/user/file.txt or ./file.txt.
+  -D  HTTP request body from file. For example, /home/user/file.txt or ./file.txt.  
+      Any {hey_uuid} within this file will be replaced with a UUID each time it is 
+      referenced and in each concurrent request too.
   -T  Content-type, defaults to "text/html".
   -a  Basic authentication, username:password.
   -x  HTTP Proxy address as host:port.

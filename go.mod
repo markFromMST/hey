@@ -1,4 +1,4 @@
-module github.com/rakyll/hey
+module github.com/markFromMST/hey
 
 require (
 	github.com/google/uuid v1.1.0
