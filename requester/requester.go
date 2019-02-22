@@ -274,6 +274,7 @@ func cloneRequest(r *http.Request, body []byte) *http.Request {
 		for i := 0; i < uuidCount; i++ {
 			bodyString = strings.Replace(bodyString, "{hey_uuid}", uuid.New().String(), 1)
 		}
+		r2.ContentLength = int64(len([]byte(bodyString)))
 		r2.Body = ioutil.NopCloser(bytes.NewReader([]byte(bodyString)))
 	}
 	return r2
